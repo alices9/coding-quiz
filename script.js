@@ -7,19 +7,29 @@ var choiceBEl = document.getElementById("choice-b")
 var choiceCEl = document.getElementById("choice-c")
 var choiceDEl = document.getElementById("choice-d")
 
-var questionList = ["How do you get the length of an array?"];
-var answerListA = [".length"];
-var answerListB =[".length - 1"];
-var answerListC =[".length + 1"];
-var answerListD =[".count"];
-
+var questionList = [
+    "How do you get the length of an array?",
+    "Question 2"];
+var answerListA = [
+    ".length",
+    "a2"];
+var answerListB = [
+    ".length - 1",
+    "b2"];
+var answerListC = [
+    ".length + 1",
+    "c2"];
+var answerListD = [
+    ".count",
+    "d2"];
+var answerSheet = [];
 
 
 
 
 starterEl.addEventListener("click", function(){
     countdown();
-    starterEl.setAttribute("visibility", "hidden");
+    starterEl.style.display= "none";
     introEl.textContent = "";
     display();
 })
@@ -39,14 +49,16 @@ function countdown() {
 }
 
 function display() {
+    
+
     for (var i = 0; i <=9; i++){
         if (timerEl !== 0){
 
-            mainTextEl.textContent = questionList[i];
-            choiceAEl.textContent = answerListA[i];
-            choiceBEl.textContent = answerListB[i];
-            choiceCEl.textContent = answerListC[i];
-            choiceDEl.textContent = answerListD[i];
+            mainTextEl.textContent = "Q" + (i+1) + ". " + questionList[i];
+            choiceAEl.textContent = "(A) " + answerListA[i];
+            choiceBEl.textContent = "(B) " + answerListB[i];
+            choiceCEl.textContent = "(C) " + answerListC[i];
+            choiceDEl.textContent = "(D) " + answerListD[i];
         }
         return;
     }

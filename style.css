@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 17px;
+    color:blueviolet
+}
+
+main{
+    text-align: center;
+    border: 2px solid black;
+    
+}
+
+#countdown{
+    display: flex;
+    position:relative;
+    margin-right: 0;
+}
+
